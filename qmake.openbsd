@@ -1,0 +1,13 @@
+#!/bin/sh
+
+qmake-mt \
+	USE_QRCODE=1 \
+	USE_UPNP=1 \
+	USE_DBUS=1 \
+	QMAKE_LRELEASE=/usr/local/bin/lrelease \
+	BOOST_LIB_SUFFIX=-mt \
+	BDB_LIB_PATH=/usr/local/lib/db4.8 \
+	BDB_INCLUDE_PATH=/usr/local/include/db4.8 \
+	BOOST_LIB_PATH=/usr/local/lib \
+	BOOST_INCLUDE_PATH=/usr/local/include \
+	bitcoin-qt.pro

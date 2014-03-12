@@ -808,7 +808,7 @@ void LogStackTrace() {
     printf("\n\n******* exception encountered *******\n");
     if (fileout)
     {
-#ifndef WIN32
+#ifdef __linux__
         void* pszBuffer[32];
         size_t size;
         size = backtrace(pszBuffer, 32);
